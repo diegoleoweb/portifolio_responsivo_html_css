@@ -1,0 +1,236 @@
+/*Pegamos a fonte no figma e copia do google fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    /* declarando a variavel de cores nome atribuido + a variavel. (--cor-primaria: #000000)*/
+    --cor-primaria: #000000;
+    --cor-secundaria:#f6f6f6f6;
+    --cor-terciara:#22D4FD;
+    --cor-hover:#27272727;
+
+    /*variaveis de fonte: nome + a fonte definida*/
+    --font-primaria:'Krona One', sans-serif;
+    --font-secundaria:'montserrat', sans-serif;
+}
+
+body{
+    /*height == Altura, 100vh == viem port, varia de cada dispositivo
+    tablet,celulares etc .*/
+   /* height: 100vh; */
+    /*box-sizing: border-box == elemento filho nao sai do elemento pai.*/
+    box-sizing: border-box;
+
+    /*background-color muda a cor de fundo da pagina*/
+    background-color:var(--cor-primaria);/* usando variaveis de cores com  root*/
+
+    /*color muda a cor da fonte*/
+    color: var(--cor-secundaria);
+    
+}
+.cabecalho{
+    /*sentido horario cima, direita, baixo, esquerda*/
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--font-secundaria);
+    font-size: 24px;  
+    font-weight: 600;
+    color: var(--cor-terciara);
+    text-decoration: none;
+}
+
+
+/* . == ponto == chamar uma classe definida no HTML para estilizar */
+.titulo_destaque{
+    /*cor da fonte*/
+    color: var(--cor-terciara);
+}
+
+/*chamando a classe usando . == ponto */
+.principal{
+    padding: 5% 15%;
+
+    /*display:felx == coloca os itens na msm linha.*/
+    display:flex;
+
+    /*align-items == alinha os elementos cima , baixo, centro.*/
+    align-items: center;
+
+    /*justify-contente == coloca espacamento entre os elementos dentro con container.*/
+    justify-content: space-between;
+    gap: 82px;
+}
+
+/* usando boas praticas nos nomes das class separando com __*/
+/*chamando a class usando . (ponto)*/
+.apresentacao__conteudo{
+    /*flex muda a direção dos elementos de linha para coluna, gap (espaço entre os elementos*/
+    display: flex;
+
+    /* coloca os elementos em coluna msm como dispaly flex*/
+    flex-direction: column;
+
+    gap: 40px;
+
+    /*width  615px define a largura do container filho */
+    width: 50%;
+}
+
+/* usando . para chamar a class*/
+.apresentacao__conteudo__titulo{
+    /* font-size definie o tamanho da fonte "neste caso usamod px*/
+    font-size: 2.25rem; /* 01 rem == 16px ex:32px == 2 rem*/
+
+    /*Alterando a fonte importando do google fontes*/
+    font-family: var(--font-primaria); /*variavel de fonte root*/
+}
+
+/* . chama uma class e boas praticas com __ no nome das class*/
+.apresentacao__conteudo__texto{
+    /* tamanho da fonte em px */
+    font-size: 1.5rem;
+
+    /* font-family muda a font do google fonte*/
+    font-family: var(--font-secundaria);
+}
+/*class para div de links, chamando a class com (ponto .) */
+.apresentacao__links{
+    /*Usando display flex para agrupar os elementos em linha.*/
+    display:flex;
+
+    /* flex-direction tira a diração do flex linha e coloca em coluna*/
+    flex-direction: column;
+
+    /*Alinha o itens no centro agora em coluna pela propriedade flex column*/
+    align-items: center;
+
+    /* space-between separa os elementos do flex para as stremidades da caixa*/
+    justify-content: space-between;
+
+    /*usando padding 10px para afasta os links das img*/
+    padding: 10px;
+    gap: 32px;
+}
+/*Usando  . para chama a classe*/
+.apresentacao__links__subtitulo{
+    /*Chamando a fonte importada krona One*/
+    font-family: var(--font-primaria);
+
+    /**/
+    font-weight: 400;
+
+    /*definindo tamanho da fonte*/
+    font-size: 1.5rem;
+}
+.apresentacao__conteudo__sociais{
+    /*mudando a cor do conteudo*/
+    /* background-color: #22D4FD; */
+    /*Os elementos ficaram em linha, centralizados, 16px de espaço entre eles*/
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    /*border == borda do elemento
+    1º Largura da borda
+    2º Estilu de borda 
+    3º Cor da borda */
+    border: 2px solid var(--cor-terciara);
+
+    /*largura definida*/
+    width: 50%;
+
+    /*alinhando o texto no centro*/
+    text-align: center;
+
+    /*definindo cor da fonte*/
+    color: var(--cor-secundaria);
+
+    /*criando um raio da borda (arredondado)*/
+    border-radius: 8%;
+
+    /* tamanho da fonte*/
+    font-size: 1.5rem;
+
+    /*espaço entre os texto e botões*/
+    padding: 21.5px 0;
+
+    /*tirando o sublinhado dos links (toda a decoração)*/
+    text-decoration: none;
+
+    /*importando uma fonte com o tamanho de 600px*/
+    font-family: var(--font-secundaria);
+    font-weight: 600px;
+}
+
+.apresentacao__conteudo__sociais:hover{
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciara);
+    transition: 0.5s;
+    
+}.rodape{
+    /* cor de fundo, cor da fonte, alinhamento texto, espaço conteudo ate a margin, fonte,tamanho da fonte, peso da fonte*/
+    background-color: var(--cor-terciara);
+    color: #000000;
+    text-align: center;
+    padding: 23px;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.apresentacao__imagem{
+    width: 50%;
+}
+.rodape__link{
+    /* link da Alura tirando a decoração e trocando a  cor*/
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+.imagen__conteudo{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    margin: 53px;
+}
+.curriculo__section{
+    padding: 15px;
+}
+.h2__titulos{
+    color: var(--cor-terciara);
+    font-size: 2.5rem;
+    margin: 20px 0 20px;
+}
+.descricao{
+    font-size: 1.25rem;
+    line-height:  25px;
+}
+.img__sensui{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 5px solid var(--cor-terciara);
+}
+
+/*Estilo da pagina responsiva. (max-width:1200px) menos que isso começa a aplica estilos @media*/
+@media ( max-width: 1200px) {
+    .cabecalho{
+        padding:  10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .principal{
+        flex-direction: column-reverse;/* inverte o elemento final e coloca no inicio "a img"*/
+        padding: 5%;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+
+}
